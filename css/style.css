@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  font-family: 'Alegreya', sans-serif;
+  font-size: 62.5%;
+  background: #f3f3f3;
+  line-height: 1.4;
+}
+/* Base */
+.container{
+  width: 50%;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: #031947;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Header */
+#img-div{
+  background: url(../img/stan-lee.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  font-family: 'ZCOOL KuaiLe', sans-serif;
+  color: #EAEA20;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#img-div::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1);
+}
+#img-div > * {
+  /* align-self: center; */
+}
+#title{
+  margin-top: 18%;
+  padding: 0 1rem;
+  font-size: 8rem;
+  letter-spacing: 0.7rem;
+}
+#img-caption{
+  font-size: 2.4rem;
+  font-family: 'Courgette', cursive;
+  text-transform: capitalize;
+}
+#img-div .nav-bar{
+  margin-top:2rem;
+}
+
+#img-div .nav-bar ul{
+  /* margin-top: -160px; */
+  list-style: none;
+  display: flex;
+}
+.nav-bar a{
+  margin: 1rem 3rem 0rem;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
+}
+.nav-bar a:hover{
+  border-bottom: 3px solid #EAEA20;
+  transition: border-bottom 200ms ease-out;
+}
+#tribute-info{
+  padding-top: 8rem;
+  font-size: 2rem;
+  color: #51565F;
+}
+#tribute-info p:first-child::first-letter{
+  font-size: 10rem;
+  font-weight: normal;
+  margin-right:1rem;
+  padding: 0 0.5rem;
+  line-height: 1; /* key */
+  float: left;
+  display: inline-block;
+  vertical-align: text-top;
+  background: #51565F;
+  color: #f3f3f3;
+}
+#tribute-info p:not(:last-child){
+  margin-bottom: 3.5rem;
+}
+
+/* ======= WORK SECTION ======== */
+
+#tribute-work .title{
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 0.6rem;
+  margin: 3rem 0;
+}
+#tribute-work .box {
+  display: flex;
+  margin-bottom: 4rem;
+}
+#tribute-work .box .side-box{
+  margin-left: 2rem;
+}
+#tribute-work .box h1{
+  color: #959500;
+}
+#tribute-work .caption{
+  font-family: 'Courgette', cursive;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+#tribute-link{
+  margin-top: 2rem;
+  background: #EAEA20;
+  font-size: 2.5rem;
+  padding: 2rem 1rem; 
+  text-align: center;
+  font-weight: bold;
+  color: #51565F;
+  color: #63605B;
+  letter-spacing: 0.5rem;
+}
+@media (max-width:768px) {
+  .container{
+    width: 60%;
+    margin: auto;
+  }
+  #title{
+    font-size: 6rem;
+    margin-top: 30%;
+  }
+}
+@media (max-width:568px){
+  #img-div{
+    background-position-x: 30%;
+  }
+  #img-div .nav-bar{
+    /* display: block; */
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #img-div .nav-bar ul{
+    display: block;
+  }
+  #img-div .nav-bar li:not(:last-child){
+    padding: 0.5rem;
+    border-bottom: 2px solid #666;
+  }
+  #img-div .nav-bar a{
+    border-bottom: none;
+  }
+  #title{
+    font-size: 4rem;
+    margin-top: 40%;
+  }
+  .container{
+    width: 80%;
+    margin: auto;
+  }
+  #tribute-work .title{
+    font-size: 4rem;
+    letter-spacing: 0;
+  }
+
+}
